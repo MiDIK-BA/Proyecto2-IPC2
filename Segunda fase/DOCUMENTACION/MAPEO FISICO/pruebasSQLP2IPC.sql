@@ -215,7 +215,7 @@ CREATE TABLE pago_anuncio (
   id_anunciante INT NOT NULL,
   fecha_compra DATE NOT NULL,
   id_anuncio INT NOT NULL,
-  costo DECIMAL NOT NULL,                       
+  costo DECIMAL(7,2) NOT NULL,                       
   CONSTRAINT PK_pago_anuncio PRIMARY KEY (id_pago),
   CONSTRAINT FK_to_anunciante FOREIGN KEY (id_anunciante) REFERENCES empresa_anunciante (id_anunciante),
   CONSTRAINT FK_to_anuncio_of_pago_anuncio FOREIGN KEY (id_anuncio) REFERENCES anuncio (id_anuncio)
